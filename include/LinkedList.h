@@ -15,6 +15,7 @@ public:
     void addReviewToSpot(string spotName, string reviewText, double rating);
     void displayAll();
     void displayByCity(string city);
+    void displayAboveRating(double minRating);
 };
 
 #endif

@@ -74,3 +74,16 @@ void LinkedList::displayByCity(string city) {
     }
     if (!found) cout << "No spots found for city: " << city << endl;
 }
+
+void LinkedList::displayAboveRating(double minRating) {
+    Spot* temp = head;
+    bool found = false;
+    while (temp) {
+        if (temp->rating >= minRating) {
+            cout << temp->spotName << " (" << temp->city << ") [" << temp->rating << "⭐]" << endl;
+            found = true;
+        }
+        temp = temp->next;
+    }
+    if (!found) cout << "No spots found with rating >= " << minRating << endl;
+}
